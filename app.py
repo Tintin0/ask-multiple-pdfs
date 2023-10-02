@@ -83,7 +83,7 @@ def main():
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = None
 
-    st.header("Chat with multiple PDFs and Word DOCX:books:")
+    st.header("FLIX Legal Team: Chat with multiple PDFs and Word DOCX:books:")
     user_question = st.text_input("Ask a question about your documents:")
     if user_question:
         handle_userinput(user_question)
