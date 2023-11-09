@@ -40,8 +40,8 @@ def get_vectorstore(text_chunks):
     return vectorstore
 
 def get_conversation_chain(vectorstore, llm_choice):
-    if llm_choice == "gpt-4":
-        llm = ChatOpenAI(model_name="gpt-4")
+    if llm_choice == "gpt-4-turbo":
+        llm = ChatOpenAI(model_name="gpt-4-1106-preview")
     elif llm_choice == "gpt-3.5-turbo":
         llm = ChatOpenAI(model_name="gpt-3.5-turbo")
     elif llm_choice == "flan-t5-xxl":
@@ -92,7 +92,7 @@ def main():
         st.subheader("Your documents")
 
         # LLM-Auswahl
-        llm_choices = ["gpt-4", "gpt-3.5-turbo", "flan-t5-xxl", "MistralAI"]
+        llm_choices = ["gpt-4-turbo", "gpt-3.5-turbo", "flan-t5-xxl", "MistralAI"]
         selected_llm = st.selectbox("Wählen Sie LLM:", llm_choices)
 
         if "selected_llm" not in st.session_state:
