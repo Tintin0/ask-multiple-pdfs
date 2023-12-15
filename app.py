@@ -57,7 +57,7 @@ def get_conversation_chain(vectorstore, llm_choice):
     elif llm_choice == "flan-t5-xxl":
         llm = HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature":0.5, "max_length":512})
     elif llm_choice == "MistralAI":
-        llm = HuggingFaceHub(repo_id="mistralai/Mistral-7B-v0.1", model_kwargs={"temperature":0.5, "max_length":512})
+        llm = HuggingFaceHub(repo_id="HuggingFaceH4/zephyr-7b-beta", model_kwargs={"temperature":0.5, "max_length":2048})
 
     # Fügen Sie hier bei Bedarf weitere Auswahlmöglichkeiten hinzu
 
